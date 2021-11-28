@@ -63,11 +63,9 @@
         padding: 0 10rem;
         background-image: url("./images/bg-intro-desktop.svg");
         background-repeat: no-repeat;
-        /* background-position-x: 600px; */
         background-position-y: -150px;
         background-position-x: 650px;
         background-size: contain;
-        /* background-size: cover; */
         overflow: hidden;
       }
 
@@ -77,8 +75,6 @@
         margin-right: -250px;
       }
 
-      main > div:first-child > div {
-      }
       section.hero {
         display: flex;
         flex-direction: column;
@@ -86,18 +82,75 @@
       }
 
       section.hero h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
         width: 60%;
       }
       section.hero p {
         padding: 2rem 0;
-        width: 70%;
+        width: 60%;
+        line-height: 1.5rem;
       }
 
       section.why-choose {
         background-color: hsl(220, 16%, 96%);
         padding: 5rem 10rem;
         margin-top: -150px;
+      }
+      section.why-choose h2 {
+        font-size: 2.5rem;
+      }
+
+      section.why-choose > p {
+        padding: 2rem 0 5rem 0;
+        width: 50%;
+      }
+
+      section.why-choose .services {
+        display: flex;
+      }
+      section.why-choose .services p {
+        padding: 0 1rem 0 0;
+      }
+
+      section.why-choose .services h3 {
+        padding: 1rem 0;
+      }
+
+      section.latest-articles {
+        padding: 5rem 10rem;
+      }
+      section.latest-articles h2 {
+        font-size: 2.5rem;
+        padding-bottom: 4rem;
+      }
+      section.latest-articles .card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      section.latest-articles .card {
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      section.latest-articles .card h3 {
+        padding: 1.5rem 0;
+      }
+      section.latest-articles .card .description {
+        padding: 25px;
+      }
+      section.latest-articles img {
+        width: 100%;
+        height: 200px;
+      }
+
+      footer {
+        background-color: hsl(233, 26%, 24%);
+        color: hsl(0, 0%, 98%);
+        display: flex;
+        justify-content: space-between;
+        padding: 5rem 10rem;
       }
     </style>
   </head>
@@ -142,7 +195,7 @@
           We leverage Open Banking to turn your bank account into your financial
           hub. Control your finances like never before.
         </p>
-        <div>
+        <div class="services">
           <div>
             <div>
               <img src="./images/icon-online.svg" alt="icon online banking" />
@@ -184,7 +237,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="latest-articles">
         <h2>Latest Articles</h2>
         <div class="card-container">
           <div class="card card-1">
@@ -194,12 +247,14 @@
                 alt="currency image-currency"
               />
             </div>
-            <div>By Claire Robinson</div>
-            <h3>Receive money in any currency with no fees</h3>
-            <p>
-              The world is getting smaller and we’re becoming more mobile. So
-              why should you be forced to only receive money in a single …
-            </p>
+            <div class="description">
+              <div>By Claire Robinson</div>
+              <h3>Receive money in any currency with no fees</h3>
+              <p>
+                The world is getting smaller and we’re becoming more mobile. So
+                why should you be forced to only receive money in a single …
+              </p>
+            </div>
           </div>
           <div class="card card-2">
             <div>
@@ -208,12 +263,14 @@
                 alt="currency image-currency"
               />
             </div>
-            <div>By Wilson Hutton</div>
-            <h3>Treat yourself without worrying about money</h3>
-            <p>
-              Our simple budgeting feature allows you to separate out your
-              spending and set realistic limits each month. That means you …
-            </p>
+            <div class="description">
+              <div>By Wilson Hutton</div>
+              <h3>Treat yourself without worrying about money</h3>
+              <p>
+                Our simple budgeting feature allows you to separate out your
+                spending and set realistic limits each month. That means you …
+              </p>
+            </div>
           </div>
 
           <div class="card card-3">
@@ -223,12 +280,14 @@
                 alt="currency image-currency"
               />
             </div>
-            <div>By Wilson Hutton</div>
-            <h3>Take your Easybank card wherever you go</h3>
-            <p>
-              We want you to enjoy your travels. This is why we don’t charge any
-              fees on purchases while you’re abroad. We’ll even show you …
-            </p>
+            <div class="description">
+              <div>By Wilson Hutton</div>
+              <h3>Take your Easybank card wherever you go</h3>
+              <p>
+                We want you to enjoy your travels. This is why we don’t charge
+                any fees on purchases while you’re abroad. We’ll even show you …
+              </p>
+            </div>
           </div>
           <div class="card card-4">
             <div>
@@ -237,13 +296,15 @@
                 alt="currency image-currency"
               />
             </div>
-            <div>By Claire Robinson</div>
-            <h3>Our invite-only Beta accounts are now live!</h3>
-            <p>
-              After a lot of hard work by the whole team, we’re excited to
-              launch our closed beta. It’s easy to request an invite through the
-              site ...
-            </p>
+            <div class="description">
+              <div>By Claire Robinson</div>
+              <h3>Our invite-only Beta accounts are now live!</h3>
+              <p>
+                After a lot of hard work by the whole team, we’re excited to
+                launch our closed beta. It’s easy to request an invite through
+                the site ...
+              </p>
+            </div>
           </div>
         </div>
       </section>
