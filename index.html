@@ -13,12 +13,91 @@
     <title>Frontend Mentor | Easybank landing page</title>
 
     <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
+      body {
+        font-size: 18px;
+        background-color: hsl(0, 0%, 98%);
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 1rem 10rem;
+        width: 100%;
+        background-color: hsl(0, 0%, 100%);
+        position: fixed;
+        z-index: 900;
+      }
+
+      header nav ul {
+        list-style: none;
+        display: flex;
+      }
+
+      header nav ul li {
+        width: 100px;
+      }
+
+      header ul li a {
+        text-decoration: none;
+        color: black;
+      }
+
+      button.request-invite {
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 1.5rem;
+        font-weight: 700;
+        color: hsl(0, 0%, 98%);
+        background-color: hsl(192, 70%, 51%);
+      }
+
+      main > div:first-child {
+        display: flex;
+        padding: 0 10rem;
+        background-image: url("./images/bg-intro-desktop.svg");
+        background-repeat: no-repeat;
+        /* background-position-x: 600px; */
+        background-position-y: -150px;
+        background-position-x: 650px;
+        background-size: contain;
+        /* background-size: cover; */
+        overflow: hidden;
+      }
+
+      main > div:first-child img {
+        width: 750px;
+        margin-top: -50px;
+        margin-right: -250px;
+      }
+
+      main > div:first-child > div {
+      }
+      section.hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      section.hero h1 {
+        font-size: 2.5rem;
+        width: 60%;
+      }
+      section.hero p {
+        padding: 2rem 0;
+        width: 70%;
+      }
+
+      section.why-choose {
+        background-color: hsl(220, 16%, 96%);
+        padding: 5rem 10rem;
+        margin-top: -150px;
       }
     </style>
   </head>
@@ -35,7 +114,7 @@
         </ul>
       </nav>
       <div>
-        <button>Request Invite</button>
+        <button class="request-invite">Request Invite</button>
       </div>
     </header>
 
@@ -49,15 +128,15 @@
             more.
           </p>
           <div>
-            <button>Request Invite</button>
+            <button class="request-invite">Request Invite</button>
           </div>
         </section>
-        <div>
+        <div class="mockup-container">
           <img src="./images/image-mockups.png" alt="mockups" />
         </div>
       </div>
 
-      <section>
+      <section class="why-choose">
         <h2>Why choose Easybank?</h2>
         <p>
           We leverage Open Banking to turn your bank account into your financial
@@ -189,14 +268,9 @@
         </ul>
       </div>
       <div>
-        <div><button>Request Invite</button></div>
+        <div><button class="request-invite">Request Invite</button></div>
         <div>© Easybank. All Rights Reserved</div>
       </div>
     </footer>
-
-    <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Joseph Kabemba</a>.
-  </div> -->
   </body>
 </html>
