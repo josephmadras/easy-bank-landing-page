@@ -34,6 +34,8 @@
 
       body p {
         color: hsl(233, 8%, 62%);
+        font-size: 0.95rem;
+        line-height: 1.25rem;
       }
 
       h1,
@@ -89,6 +91,8 @@
       }
       button.request-invite:hover {
         cursor: pointer;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: scale(1.05);
       }
 
       main > div:first-child {
@@ -167,9 +171,17 @@
         background-color: hsl(0, 0%, 100%);
         border-radius: 10px;
         overflow: hidden;
+        transition: 0.5s;
+      }
+
+      section.latest-articles .card .author {
+        font-size: 0.8rem;
+        color: hsl(233, 8%, 62%);
       }
       section.latest-articles .card:hover {
         cursor: pointer;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transform: scale(1.05);
       }
       section.latest-articles .card h3 {
         padding: 1.5rem 0;
@@ -214,8 +226,6 @@
         transition: 0.5s;
       }
       footer .links ul a:hover {
-        /* text-decoration: none;
-        color: hsl(220, 16%, 96%); */
         color: hsl(136, 65%, 51%);
       }
 
@@ -233,6 +243,104 @@
       }
       footer .social-media i {
         margin-right: 5px;
+        transition: 0.5s;
+      }
+
+      footer .social-media i:hover {
+        cursor: pointer;
+        color: hsl(136, 65%, 51%);
+      }
+
+      @media screen and (max-width: 767px) {
+        section.latest-articles {
+          /* padding: 5rem 10rem; */
+          padding: 5rem;
+        }
+        /* section.latest-articles h2 {
+          font-size: 2.5rem;
+          padding-bottom: 4rem;
+        } */
+        section.latest-articles .card-container {
+          /* display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20px; */
+          display: flex;
+          flex-direction: column;
+        }
+
+        section.latest-articles h2 {
+          text-align: center;
+        }
+        /* section.latest-articles .card {
+          background-color: hsl(0, 0%, 100%);
+          border-radius: 10px;
+          overflow: hidden;
+          transition: 0.5s;
+        }
+
+        section.latest-articles .card .author {
+          font-size: 0.8rem;
+          color: hsl(233, 8%, 62%);
+        }
+        section.latest-articles .card:hover {
+          cursor: pointer;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          transform: scale(1.05);
+        }
+        section.latest-articles .card h3 {
+          padding: 1.5rem 0;
+          transition: 0.5s;
+        }
+        section.latest-articles .card:hover h3 {
+          color: hsl(136, 65%, 51%);
+        }
+
+        section.latest-articles .card .description {
+          padding: 25px;
+        }
+        section.latest-articles img {
+          width: 100%;
+          height: 200px;
+        } */
+
+        footer {
+          display: flex;
+          flex-direction: column;
+          padding: 5rem;
+        }
+
+        footer .links {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 25px 0;
+        }
+
+        footer .links ul {
+          margin-right: 0;
+          text-align: center;
+        }
+
+        footer .social-media {
+          text-align: center;
+          margin-top: 15px;
+        }
+
+        footer .social-media i {
+          margin-right: 11px;
+        }
+
+        footer .copyright-container {
+          text-align: center;
+        }
+        footer .copyright-container div:first-child {
+          margin-bottom: 20px;
+        }
+
+        footer .logo-container {
+          text-align: center;
+        }
       }
     </style>
   </head>
@@ -330,7 +438,7 @@
               />
             </div>
             <div class="description">
-              <div>By Claire Robinson</div>
+              <div class="author">By Claire Robinson</div>
               <h3>Receive money in any currency with no fees</h3>
               <p>
                 The world is getting smaller and we’re becoming more mobile. So
@@ -346,7 +454,7 @@
               />
             </div>
             <div class="description">
-              <div>By Wilson Hutton</div>
+              <div class="author">By Wilson Hutton</div>
               <h3>Treat yourself without worrying about money</h3>
               <p>
                 Our simple budgeting feature allows you to separate out your
@@ -363,7 +471,7 @@
               />
             </div>
             <div class="description">
-              <div>By Wilson Hutton</div>
+              <div class="author">By Wilson Hutton</div>
               <h3>Take your Easybank card wherever you go</h3>
               <p>
                 We want you to enjoy your travels. This is why we don’t charge
@@ -379,7 +487,7 @@
               />
             </div>
             <div class="description">
-              <div>By Claire Robinson</div>
+              <div class="author">By Claire Robinson</div>
               <h3>Our invite-only Beta accounts are now live!</h3>
               <p>
                 After a lot of hard work by the whole team, we’re excited to
