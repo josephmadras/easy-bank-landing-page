@@ -251,13 +251,23 @@
         color: hsl(136, 65%, 51%);
       }
 
+      footer .logo-container img {
+        filter: contrast(0%);
+      }
       @media screen and (max-width: 767px) {
+        header {
+          padding: 1rem 2rem;
+        }
+
+        header nav,
+        header button.request-invite {
+          display: none;
+        }
         main > div:first-child {
           display: flex;
           padding: 0 5rem;
           flex-direction: column-reverse;
           background-image: url("./images/bg-intro-mobile.svg");
-          /*background-repeat: no-repeat;*/
           background-position-y: -50px;
           background-position-x: 0px;
           background-size: contain;
