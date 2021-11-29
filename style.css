@@ -57,6 +57,7 @@ header ul li a:hover {
 header .hamburger-container {
   display: none;
 }
+
 button.request-invite {
   border: none;
   padding: 0.8rem 1.5rem;
@@ -82,10 +83,6 @@ main > div:first-child {
   background-image: url("./images/bg-intro-desktop.svg");
   background-repeat: no-repeat;
   background-position: top 130% right -170%;
-  /*background-repeat: no-repeat;
-  background-position-y: -150px;
-  background-position-x: 650px;
-  background-size: contain;*/
   overflow: hidden;
 }
 
@@ -237,9 +234,58 @@ footer .social-media i:hover {
 footer .logo-container img {
   filter: contrast(0%);
 }
+
+.hamburger-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  cursor: pointer;
+  padding-right: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger,
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  width: 40px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+}
+
+.menu-btn__burger::before {
+  transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+  transform: translateY(10px);
+}
+
+.hamburger-container.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.hamburger-container.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.hamburger-container.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
 @media screen and (max-width: 767px) {
   header {
     padding: 1rem 2rem;
+    position: relative;
   }
 
   header nav,
@@ -248,7 +294,7 @@ footer .logo-container img {
   }
 
   header .hamburger-container {
-    display: block;
+    display: flex;
   }
 
   header nav.mobile-nav {
@@ -261,6 +307,7 @@ footer .logo-container img {
     border-radius: 1rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     justify-content: center;
+    transition: transform 1s ease-in-out;
   }
 
   header nav.mobile-nav ul {
@@ -289,7 +336,6 @@ footer .logo-container img {
     margin-top: -100px;
     margin-right: 0px;
     margin-left: -10px;
-    /* padding: 0 5rem; */
   }
 
   section.hero {
@@ -297,7 +343,6 @@ footer .logo-container img {
     flex-direction: column;
     justify-content: center;
     padding-bottom: 40px;
-    /* padding: 0 0rem; */
   }
 
   section.hero h1 {
