@@ -54,6 +54,9 @@ header ul li a:hover {
   border-bottom: 2px solid hsl(136, 65%, 51%);
 }
 
+header .hamburger-container {
+  display: none;
+}
 button.request-invite {
   border: none;
   padding: 0.8rem 1.5rem;
@@ -242,6 +245,10 @@ footer .logo-container img {
   header nav,
   header button.request-invite {
     display: none;
+  }
+
+  header .hamburger-container {
+    display: block;
   }
   main > div:first-child {
     display: flex;
