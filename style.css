@@ -250,6 +250,29 @@ footer .logo-container img {
   header .hamburger-container {
     display: block;
   }
+
+  header nav.mobile-nav {
+    display: flex;
+    position: absolute;
+    background-color: hsl(0, 0%, 100%);
+    width: 80%;
+    top: 5rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    justify-content: center;
+  }
+
+  header nav.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav.mobile-nav ul a {
+    color: hsl(233, 26%, 24%);
+    font-weight: 500;
+  }
   main > div:first-child {
     display: flex;
     padding: 0 2rem;
